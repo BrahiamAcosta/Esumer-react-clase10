@@ -1,0 +1,226 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f5f8;
+  color: #1f2937;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.contenedor {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.tarjeta {
+  width: 100%;
+  max-width: 750px;
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Encabezado */
+
+.encabezado {
+  margin-bottom: 25px;
+}
+
+.encabezado h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+  color: #1f2937;
+}
+
+.encabezado p {
+  margin: 0;
+  color: #6b7280;
+}
+
+/* Resumen */
+
+.resumen {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  background: #f3f4f6;
+  border-radius: 10px;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+/* Formulario */
+
+.formulario {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.formulario input {
+  flex: 1;
+  padding: 13px 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+}
+
+.formulario input:focus {
+  border-color: #2563eb;
+}
+
+.formulario button {
+  padding: 13px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-weight: bold;
+}
+
+.formulario button:hover {
+  background: #1d4ed8;
+}
+
+/* Lista */
+
+.lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tarea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 16px;
+  margin-bottom: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.informacion-tarea {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.indicador {
+  font-size: 22px;
+}
+
+.nombre-tarea {
+  word-break: break-word;
+}
+
+.tarea-completada {
+  background: #f0fdf4;
+}
+
+.tarea-completada .nombre-tarea {
+  text-decoration: line-through;
+  color: #6b7280;
+}
+
+/* Botones */
+
+.acciones {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.boton-completar,
+.boton-eliminar {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+}
+
+.boton-completar {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.boton-eliminar {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Estado vacío */
+
+.estado-vacio {
+  text-align: center;
+  padding: 45px 20px;
+  color: #6b7280;
+}
+
+.icono-vacio {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #dbeafe;
+  color: #2563eb;
+  font-size: 24px;
+}
+
+.estado-vacio h2 {
+  margin: 0 0 8px;
+  color: #374151;
+}
+
+.estado-vacio p {
+  margin: 0;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .contenedor {
+    padding: 20px 10px;
+  }
+
+  .tarjeta {
+    padding: 20px;
+  }
+
+  .formulario {
+    flex-direction: column;
+  }
+
+  .tarea {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .acciones {
+    width: 100%;
+  }
+
+  .boton-completar,
+  .boton-eliminar {
+    flex: 1;
+  }
+}
